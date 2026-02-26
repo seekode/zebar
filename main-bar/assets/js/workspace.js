@@ -35,9 +35,8 @@ export default (glazewm) => {
       } else {
         button.classList.remove("active");
       }
-      const span = document.createElement("span");
-      span.innerText = ws.displayIcon ?? ws.name;
-      button.appendChild(span);
+      console.log(ws);
+      button.innerText = ws.displayName ?? ws.name;
 
       button.addEventListener("click", () => {
         glazewm.runCommand(`focus --workspace ${ws.name}`);
@@ -59,7 +58,7 @@ export default (glazewm) => {
 
   // move the selector to the active button
   if (activeButton) {
-    selector.style.width = `${activeButton.offsetWidth + 5}px`;
-    selector.style.transform = `translateX(${activeButton.offsetLeft}px)`;
+    selector.style.width = `${activeButton.offsetWidth + 7.5}px`;
+    selector.style.transform = `translateX(${activeButton.offsetLeft}px) scale(1.1)`;
   }
 };

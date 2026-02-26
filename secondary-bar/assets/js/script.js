@@ -2,12 +2,6 @@ import * as zebar from "https://esm.sh/zebar@2";
 import workspace from "./workspace.js";
 
 const providers = zebar.createProviderGroup({
-  network: { type: "network" },
-  cpu: { type: "cpu" },
-  date: { type: "date", formatting: "cccc dd.MM.yyyy | t" },
-  battery: { type: "battery" },
-  memory: { type: "memory" },
-  weather: { type: "weather" },
   glazewm: { type: "glazewm" },
 });
 
