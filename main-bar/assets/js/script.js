@@ -37,9 +37,9 @@ providers.onOutput(() => {
     battery.style.backgroundColor = `rgb(${red}, ${green}, 0)`;
 
     if (output.battery.isCharging) {
-      batteryCharge.classList.add("charging");
+      batteryCharge.classList.add("active");
     } else {
-      batteryCharge.classList.remove("charging");
+      batteryCharge.classList.remove("active");
     }
   }
 
