@@ -25,9 +25,9 @@ providers.onOutput(() => {
     ? tilingDirection.classList.add("vertical")
     : tilingDirection.classList.remove("vertical");
 
-  if (output.glazewm.battery) {
+  if (output.battery) {
     batteryContainer.style.display = "flex";
-    const percent = output.glazewm.battery.chargePercent;
+    const percent = output.battery.chargePercent;
 
     battery.style.width = `${percent}%`;
 
@@ -36,7 +36,7 @@ providers.onOutput(() => {
     const green = Math.round(255 * (percent / 100));
     battery.style.backgroundColor = `rgb(${red}, ${green}, 0)`;
 
-    if (output.glazewm.battery.isCharging) {
+    if (output.battery.isCharging) {
       batteryCharge.classList.add("charging");
     } else {
       batteryCharge.classList.remove("charging");
